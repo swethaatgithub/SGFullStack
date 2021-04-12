@@ -1,0 +1,62 @@
+<body class="bodyColor" style="background-image: url('assets/Background.jpg') ; background-size: cover">
+  <div>
+    <app-header></app-header>
+    <div style="display: flex; flex-grow: grow; background-color : #ece8e8 ; height:auto">
+      <app-menu></app-menu>
+      <div style=" width:auto ; height:100%">
+        <br>
+        <div>
+          <li style="  list-style-type:none;margin-left:50px; width: 100%;color:black; font-size: 32px;  ">Welcome,
+            {{id}}</li>
+          <li
+            style="  list-style-type:none; margin-left:55px; width: 100%;color:rgb(17, 16, 16);font-style: italic; font-size: 14px; height: 20px  ">
+            Last login: {{lastlogin}} </li>
+        </div>
+        <hr style="width:800px; margin-left:50px">
+        <div id="Content">
+          <table class="table" style="border-collapse: collapse; border-style: solid ;" border="1">
+
+            <thead style="background-color: rgb(165, 159, 159);">
+
+              <tr>
+                <th style="width: 200px;">Date</th>
+                <th style="width: 500px;">Description</th>
+                <th style="width: 200px;">Amount</th>
+              </tr>
+            </thead>
+            <tbody>
+
+              <tr *ngFor="let transList of trans">
+                <td>{{transList.date}}</td>
+                <td>{{transList.desc}}</td>
+                <td>{{transList.amount}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <br>
+        <hr style="width:800px; margin-left:50px">
+        <div class="content">
+
+          <table>
+            <tr style="font-size: 18px; font-weight:bold ;">Subscription to alerts</tr>
+            <tr>
+              <td>
+                <input type="checkbox" id="SMS" name="SMS" value="SMS">
+                <label for="SMS"> SMS Alert</label><br>
+                <input type="checkbox" id="mar" name="mar" value="mar">
+                <label for="mar"> Marketting newsletter</label><br>
+                <input type="checkbox" id="fly" name="fly" value="fly">
+                <label for="fly">Flyers</label><br>
+
+              </td>
+            </tr>
+    
+            <tr><button class="button button1">Submit</button></tr>
+            <br>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

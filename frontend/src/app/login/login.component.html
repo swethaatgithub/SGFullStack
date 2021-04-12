@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body class="bodyColor" style="background-image: url('assets/Background.jpg') ; background-size: cover">
+    <app-header></app-header>
+    <!-- <input type="text" *ngIf='invalidLogin' style=" size : 50; border-top: 10px; background-color: rgb(240, 167, 154); border-width: 0px; " value={{errorMessage}}> -->
+
+    <div style=" background-color : rgb(221, 4, 4) ; height: 500px; margin-right: 20px; 
+                                       margin-left: 20px; padding-left: 350px; padding-top: 100px; ">
+            
+            <table style="border-collapse: collapse; width: 50%; ">
+          <tr *ngIf='invalidLogin' class="alert alert-warning"  style=" border-top: 10px; background-color: rgb(240, 167, 154); " > 
+                <td *ngIf='invalidLogin' style=" border-color:rgb(221, 4, 4)">
+                <input type="text" *ngIf='invalidLogin' style=" size : 50; border-top: 10px; background-color: rgb(240, 167, 154); border-width: 0px; " value={{errorMessage}}> 
+                </td>
+            </tr>
+            <tr >
+                <td style="font-family:Times New Roman;color: white;  "> User ID :</td>
+                <td> <input type="text" name="id" [(ngModel)]="id" style="font-family:Times New Roman; size:80;"> </td>
+            </tr>
+            <tr>
+                <td style="font-family:Times New Roman;color: white;"> Password :</td>
+                <td><input type="password" name="password" [(ngModel)]="password"> </td>
+            </tr>
+            <tr>
+                <td> </td>
+                <td> <button (click)=handleLogin() class="btn btn-success">Login</button> </td>
+            </tr>
+        </table>
+
+      
+    </div>
+
+</body>

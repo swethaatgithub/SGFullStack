@@ -1,0 +1,42 @@
+body {
+     font-family: 'Lato';
+    // background:#666;
+    color:#fff;
+  }
+   
+  *{
+    margin:0;
+    padding:0;
+  }
+   
+  h2 {
+    font-weight: bold;
+    font-size: 2rem;
+  }
+   
+  p {
+    font-size: 1rem;
+    font-weight: normal;
+  }
+   
+  ul,li{
+    list-style:none;
+  }
+  ul{
+    display: flex;
+    flex-direction: row; 
+     margin-left : 40px;
+  }
+  ul li a{
+    text-decoration:none;
+    box-shadow: 5px 5px rgb(199, 198, 198);
+    color:#000;
+    background:rgb(241, 241, 115);
+    display:block;
+    height:10em;
+    width:10em;
+    padding:1em;
+  }
+  ul li{
+    margin:1em;
+  }
